@@ -10,6 +10,9 @@ import 'popper.js';
 import './assets/app.scss';
 
 Vue.component('Navbar', require('./components/Navbar.vue').default);
+Vue.component('Hero', require('./components/Hero.vue').default);
+Vue.component('Products', require('./sections/Products.vue').default);
+Vue.component('AboutUs', require('./sections/AboutUs.vue').default);
 
 Vue.config.productionTip = false;
 
