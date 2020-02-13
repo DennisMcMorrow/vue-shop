@@ -2,6 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Admin from "../views/Admin.vue";
+import Overview from "../views/Overview.vue";
+import Productview from "../views/Productview.vue";
+import Orders from "../views/Orders.vue";
 
 Vue.use(VueRouter);
 
@@ -19,7 +22,24 @@ const routes = [
   {
     path: "/admin",
     name: "admin",
-    component: Admin
+    component: Admin,
+    children: [
+      {
+        path: "overview",
+        name: "overview",
+        component: Overview
+      },
+      {
+        path: "productview",
+        name: "productview",
+        component: Productview
+      },
+      {
+        path: "orders",
+        name: "orders",
+        component: Orders
+      }
+    ]
   },
   {
     path: "/about",
